@@ -21,8 +21,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-# The sealed held-out outputs. Their sha256 values are checked by scripts/fetch_heldout.sh before use.
-HELDOUT_BASE_URL = 'https://github.com/cloudronin/plainproof/releases/download/v0.1.0'
+# The sealed held-out outputs, on Zenodo (record 23647996, DOI 10.5281/zenodo.23647996). Their sha256 values are checked
+# by scripts/fetch_heldout.sh before use. Fallback mirror: ZENODO_URL=https://github.com/cloudronin/plainproof/releases/download/v0.2.0
+HELDOUT_BASE_URL = 'https://zenodo.org/records/23647996/files'
 PAYLOAD = Path(__file__).resolve().parent / 'payload'
 
 

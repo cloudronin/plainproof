@@ -1,8 +1,8 @@
 # plainproof
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23647650.svg)](https://doi.org/10.5281/zenodo.23647650)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23647996.svg)](https://doi.org/10.5281/zenodo.23647996)
 
-Archived on Zenodo: version 0.1.0 is DOI [10.5281/zenodo.23647650](https://doi.org/10.5281/zenodo.23647650); all versions are DOI [10.5281/zenodo.23647649](https://doi.org/10.5281/zenodo.23647649). Also on PyPI: `pip install plainproof`.
+Archived on Zenodo with the sealed held-out outputs: DOI [10.5281/zenodo.23647996](https://doi.org/10.5281/zenodo.23647996) (v0.2.0, code plus `e0-heldout.tar`, `e0b-heldout.tar` and `SHA256SUMS`); all versions: DOI [10.5281/zenodo.23647649](https://doi.org/10.5281/zenodo.23647649); version 0.1.0 (code only): DOI [10.5281/zenodo.23647650](https://doi.org/10.5281/zenodo.23647650). Also on PyPI: `pip install plainproof`.
 
 Reproduction package for **"How many follow-up questions distinguish genuine understanding from apparent mastery?"** (EDM 2027 submission, simulation study). It asks how many adaptive follow-up questions a classification test needs to tell genuine understanding from apparent mastery at a calibrated confidence target, and how that changes as a learner outsources a share *d* of the follow-ups to an AI. A second, sealed study (E0b) tests whether planted hard probe items separate outsourcing learners from honest ones.
 
@@ -16,7 +16,7 @@ plainproof init ~/plainproof        # writes the working directory: sealed scrip
 cd ~/plainproof
 plainproof test                     # 43 tests: SPRT against catIrt 0.5.1's saved steps, exact stopping time, simulator, signatures, probes
 plainproof verify                   # every sealed file against both freezes (undoes the documented substitutions, then sha256)
-plainproof fetch heldout            # the sealed held-out outputs, hash-checked
+plainproof fetch heldout            # the sealed held-out outputs from Zenodo, hash-checked
 plainproof figures                  # tables and figures from the held-out summaries (needs R 4.x on PATH; base graphics only)
 ```
 
@@ -44,8 +44,8 @@ The ASSISTments terms of use forbid passing the data on, so this package never c
 | E0b sealed freeze `reports/edm-v2-e0b/freeze.json` | `3fa0b8d457d813f59abd5255f9303e44deb2119ee79d6a9b92439a6c1cbf58ed` |
 | E0 held-out summary (`e0-heldout.tar` → `heldout/summary.json`) | `aff9a8c49d48821c0e9343cd058c4e0e2f1659ffabcaa719824412f3b14abc90` |
 | E0b held-out summary (`e0b-heldout.tar` → `heldout/summary.json`) | `617be427feac24df2e342da00d34e91c78d5de91592cee390ef3516ae9e2ff3f` |
-| `e0-heldout.tar` (release asset) | `bd06a11eb7163da102cad6ea0df12ea79e52ff94aab1dc35d28ec3910af2be22` |
-| `e0b-heldout.tar` (release asset) | `68219f228c41da972fe4c8f92c218e01f85f08eed864185f237cecda05314bbf` |
+| `e0-heldout.tar` (Zenodo 23647996; also a release asset) | `bd06a11eb7163da102cad6ea0df12ea79e52ff94aab1dc35d28ec3910af2be22` |
+| `e0b-heldout.tar` (Zenodo 23647996; also a release asset) | `68219f228c41da972fe4c8f92c218e01f85f08eed864185f237cecda05314bbf` |
 | ASSISTments 2009 file at BOBCAT e6b6245e | `c07ca9fa0f08207b06488cec527725938fe96e81e3c1762839e1ad0b84f974cc` |
 | 2PL item fit (regenerated in step b) | `12a3b167cd9c9b78b3c3c7faf71b2e464b0943a454f6418faf0f99b1114cb7fc` |
 | catIrt 0.5.1 CRAN binary used for the fixture | `f5418f447e91d184791e668bd2a135ea5da40c981d4a76826018295b6ea9f079` |
@@ -69,7 +69,7 @@ What each `plainproof` command runs, from the working directory (`REPRO_DATA` de
 ```sh
 python -m pytest -n auto -q tests                                       # plainproof test
 python scripts/verify_frozen.py                                         # plainproof verify
-ZENODO_URL=https://github.com/cloudronin/plainproof/releases/download/v0.1.0 bash scripts/fetch_heldout.sh   # plainproof fetch heldout
+ZENODO_URL=https://zenodo.org/records/23647996/files bash scripts/fetch_heldout.sh   # plainproof fetch heldout (mirror: .../releases/download/v0.2.0)
 python scripts/edm_v2_e0/report.py data/edm-v2-e0/heldout/summary.json  # plainproof figures (E0 tables)
 bash scripts/rscript.sh scripts/edm_v2_e0/plot_error_vs_d.R reports/edm-v2-e0/error-vs-d.csv reports/edm-v2-e0/figures/error-vs-d.png <E0 summary sha256>
 python scripts/edm_v2_e0b/report.py data/edm-v2-e0b/heldout/summary.json
