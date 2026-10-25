@@ -1,0 +1,6 @@
+include README.md LICENSE LICENSE-docs.md CITATION.cff requirements.txt substitutions.json .gitignore
+recursive-include scripts *.py *.R *.sh
+recursive-include reports *
+recursive-include docs *.md
+recursive-include tests *.py *.csv
+recursive-include data/edm-v2-e0/study *.json

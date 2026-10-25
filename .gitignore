@@ -1,0 +1,10 @@
+data/*
+!data/edm-v2-e0/
+data/edm-v2-e0/*
+!data/edm-v2-e0/study/
+__pycache__/
+*.pyc
+dist/
+build/
+*.egg-info/
+.venv/

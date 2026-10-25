@@ -1,0 +1,51 @@
+model,d,method,error_pct,questions,undecided_pct
+uniform,0.0,SPRT,2.690,9.446,19.28
+uniform,0.0,Fixed (10 forms),7.514,11.677,34.76
+uniform,0.0,Random,5.452,11.967,36.09
+uniform,0.0,BOBCAT,6.410,10.663,32.46
+uniform,0.0,SPRT native stop,3.779,4.934,3.51
+uniform,0.25,SPRT,2.039,10.930,22.78
+uniform,0.25,Fixed (10 forms),5.141,13.540,41.89
+uniform,0.25,Random,3.807,13.788,43.46
+uniform,0.25,BOBCAT,7.635,11.780,35.07
+uniform,0.25,SPRT native stop,10.277,5.446,3.49
+uniform,0.5,SPRT,7.937,12.631,27.04
+uniform,0.5,Fixed (10 forms),9.102,15.053,46.30
+uniform,0.5,Random,7.788,15.199,47.40
+uniform,0.5,BOBCAT,13.427,12.613,33.01
+uniform,0.5,SPRT native stop,27.378,5.516,3.43
+uniform,0.75,SPRT,34.537,12.460,15.86
+uniform,0.75,Fixed (10 forms),30.462,14.775,32.01
+uniform,0.75,Random,31.642,14.576,31.36
+uniform,0.75,BOBCAT,33.961,12.353,18.36
+uniform,0.75,SPRT native stop,44.391,4.543,0.62
+uniform,1.0,SPRT,50.351,9.482,0.32
+uniform,1.0,Fixed (10 forms),50.508,11.601,3.56
+uniform,1.0,Random,50.464,11.276,3.00
+uniform,1.0,BOBCAT,50.415,9.992,0.79
+uniform,1.0,SPRT native stop,50.373,3.440,0.00
+uncertainty,0.0,SPRT,2.805,9.418,19.49
+uncertainty,0.0,Fixed (10 forms),7.713,11.695,34.77
+uncertainty,0.0,Random,5.682,12.051,36.44
+uncertainty,0.0,BOBCAT,6.969,10.725,32.54
+uncertainty,0.0,SPRT native stop,4.480,4.908,3.43
+uncertainty,0.25,SPRT,2.203,10.661,21.54
+uncertainty,0.25,Fixed (10 forms),4.957,13.449,41.05
+uncertainty,0.25,Random,3.826,13.677,42.16
+uncertainty,0.25,BOBCAT,7.257,11.921,34.78
+uncertainty,0.25,SPRT native stop,8.889,5.187,3.43
+uncertainty,0.5,SPRT,7.047,11.421,20.86
+uncertainty,0.5,Fixed (10 forms),8.144,14.722,42.80
+uncertainty,0.5,Random,6.455,14.730,43.47
+uncertainty,0.5,BOBCAT,13.626,12.811,31.58
+uncertainty,0.5,SPRT native stop,19.641,5.049,2.59
+uncertainty,0.75,SPRT,21.659,11.236,13.68
+uncertainty,0.75,Fixed (10 forms),29.602,14.357,28.90
+uncertainty,0.75,Random,23.924,14.402,31.94
+uncertainty,0.75,BOBCAT,36.446,12.155,14.79
+uncertainty,0.75,SPRT native stop,32.541,4.716,1.52
+uncertainty,1.0,SPRT,50.232,9.488,0.41
+uncertainty,1.0,Fixed (10 forms),50.182,11.593,3.68
+uncertainty,1.0,Random,50.072,11.242,3.15
+uncertainty,1.0,BOBCAT,50.218,10.001,0.65
+uncertainty,1.0,SPRT native stop,50.262,3.431,0.00

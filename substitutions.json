@@ -1,0 +1,54 @@
+{
+ "subs": [
+  [
+   "REPO / 'prep-quality/prep_quality/edm_v2/planted.py'",
+   "REPO / 'src/plainproof/planted.py'"
+  ],
+  [
+   "prep_quality.edm_v2",
+   "plainproof"
+  ],
+  [
+   "prep_quality.connected_benchmark.study.reliability",
+   "plainproof.reliability"
+  ],
+  [
+   "REPO / 'prep-quality'",
+   "REPO / 'src'"
+  ],
+  [
+   "parents[2] / 'prep-quality'",
+   "parents[2] / 'src'"
+  ],
+  [
+   "Path('/Users/vishnu/pipeline-store/reasoning-boundary/",
+   "Path(__import__('os').environ.get('REPRO_DATA', 'data'), '"
+  ],
+  [
+   "sys.path.append('/Users/vishnu/.physmap-venvs/pipeline-nlp/lib/python3.11/site-packages')",
+   "pass  # (public) the original added a local site-packages path for scikit-learn; install requirements.txt"
+  ],
+  [
+   "REPO = Path('/Users/vishnu/code/plainword')",
+   "REPO = Path(__file__).resolve().parents[2]  # (public) repo root"
+  ],
+  [
+   "hashlib.sha256((REPO / p).read_bytes())",
+   "hashlib.sha256(__import__('repro_paths').original_bytes(REPO, p))"
+  ]
+ ],
+ "paths": [
+  [
+   "prep-quality/prep_quality/connected_benchmark/study/reliability.py",
+   "src/plainproof/reliability.py"
+  ],
+  [
+   "prep-quality/prep_quality/edm_v2/",
+   "src/plainproof/"
+  ],
+  [
+   "prep-quality/tests/",
+   "tests/"
+  ]
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "sha256": "6f97e661035e688c8f079cbf5b70c104e717939029e69ba824c257257ef2c40c",
+ "replaces": "calibration.json for SPRT only",
+ "previous_sha256": "7b3151ea834b753b85efef01a9810cf69aec9a7954f0bd9dc6dda618001f2bd7",
+ "reason": "a map is fitted on the kind of path it scores; SPRT now scores full 20-question paths",
+ "seeds": [
+  2026102540,
+  2026102541,
+  2026102542,
+  2026102543
+ ],
+ "learners_per_cell": 250,
+ "unchanged": [
+  "fixed",
+  "random",
+  "bobcat"
+ ],
+ "sprt_points": 16200,
+ "sprt_y_range": [
+  0.0,
+  1.0
+ ],
+ "sprt_x_range": [
+  4.0627509574261666e-12,
+  0.9999999926946415
+ ]
+}

@@ -1,0 +1,16 @@
+model,d,raw_hits_auc,probe_share
+uniform,0,0.5,0
+uniform,0.25,0.7428,0.2452
+uniform,0.5,0.8938,0.4993
+uniform,0.75,0.9704,0.7517
+uniform,1.0,0.9985,1.0000
+uncertainty,0,0.5,0
+uncertainty,0.25,0.5641,0.0872
+uncertainty,0.5,0.6119,0.1535
+uncertainty,0.75,0.6589,0.2295
+uncertainty,1.0,0.9980,1.0000
+giveup,0,0.5,0
+giveup,0.25,0.9024,0.6132
+giveup,0.5,0.9870,0.9115
+giveup,0.75,0.9975,0.9923
+giveup,1.0,0.9984,1.0000

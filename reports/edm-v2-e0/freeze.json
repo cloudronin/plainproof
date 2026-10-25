@@ -1,0 +1,326 @@
+{
+ "status": "READY TO SEAL: becomes the freeze on Vishnu's word; no held-out learner simulated",
+ "created_utc": "2026-10-25T15:38:10+00:00",
+ "branch": "cloudronin/edm-v2-e0",
+ "code": {
+  "prep-quality/prep_quality/connected_benchmark/study/reliability.py": "816e1a801e05bae1778ab921eb1884f86f072428752539d5f597825864a3272b",
+  "prep-quality/prep_quality/edm_v2/__init__.py": "212ddbe620d85eb243150a726310fdb95e7daf637cd54ac532c9ec7b77c1f066",
+  "prep-quality/prep_quality/edm_v2/bank_from_fit.py": "df9f085a9f392e0202eb31b4023c0ddb6535891de55a1603b2e2c354d1876157",
+  "prep-quality/prep_quality/edm_v2/fit.py": "9435005be5304946c60aff0cfae082c106950bf06fe31bb7e39b410387b96871",
+  "prep-quality/prep_quality/edm_v2/irt.py": "0d231e5050bc5c0a02f4c5b27cfc24d955d4079b350f06e067ba0f37defa310b",
+  "prep-quality/prep_quality/edm_v2/signature.py": "6152cdb1bdebd7643859ac2131160d50d0a9c21a6568582276cf0631bc4a5008",
+  "prep-quality/prep_quality/edm_v2/simulator.py": "8564949e5c2ea42eab2fb75028ba82b7048597477c8844debfd984d9c6d0640c",
+  "prep-quality/prep_quality/edm_v2/sprt.py": "3129dad31ea11830651ae473870d0ce80cf8321e48a46db5f0a10e440ac65e2e",
+  "prep-quality/prep_quality/edm_v2/stopping.py": "5c7810b7e627bf21c5275d28f155a0fe04cca90d98144635043da9e4a6ec159f",
+  "prep-quality/tests/test_edm_v2_e0.py": "c10d7aade08fd198023b5c8d6cccc139a39d17f0898bf86a24dc69f1a86a83aa",
+  "scripts/edm_v2_e0/bobcat_gate.py": "2627224eddafc495bb2920516837cce9dc9c963c4d0d65f0f7d0ebe79cb12d14",
+  "scripts/edm_v2_e0/catirt_sprt_steps.R": "b1213d6288b34ab1835fa7572155169efe92f4318a8dbc6244ef789c8a7f35e0",
+  "scripts/edm_v2_e0/fit_assist2009.py": "07c334cc24f7189de38cc1650337d90da57bb08da11cf468eacbb9b5f0495429",
+  "scripts/edm_v2_e0/install_catirt.R": "c0bb10eb77a57e7ca8962a2ff69f0e3f9d9892eb8715cf0847d5f2f161c77477",
+  "scripts/edm_v2_e0/pilot.py": "3351280ccbe63732a3694b13b66df9e69e34b5b0bb6b1e3b79f714a07b75b6ff",
+  "scripts/edm_v2_e0/r_env.sh": "020d8aefeccf3a865336435cad19425587443e52da7b593b2d01ef59ed9ef060",
+  "scripts/edm_v2_e0/study.py": "732462f7852850d5b21dbefaf4cf5db91ab12a4d51d32798a006344fe7806b17",
+  "scripts/published_cat_reference_v1/compare_selection_v1.py": "e842690400e2bb51a460071b04f817e9c47d8979ec0612d5bb46ad54fa72e64a"
+ },
+ "bank": {
+  "fit_json_sha256": "12a3b167cd9c9b78b3c3c7faf71b2e464b0943a454f6418faf0f99b1114cb7fc",
+  "fit_receipt_sha256": "37c7257fd21f60822a523bfc89fc5d078e0d64752b8db59e0f3555f85b9ea9e0",
+  "bank_seed": 2026102500,
+  "roles_sha256": "581b9b0a3f6e228d40d28ae57f9016e1a4eeebf0c371f5018455202c82420eb3",
+  "items": 156,
+  "followup": 50,
+  "homework": 50,
+  "transfer": 56,
+  "held_out_families": [
+   10,
+   11
+  ],
+  "families": "synthetic (12 x 13, difficulty-stratified)"
+ },
+ "calibration": {
+  "sha256": "6f97e661035e688c8f079cbf5b70c104e717939029e69ba824c257257ef2c40c",
+  "receipt_sha256": "674ee53b1d80f84a95f90cf4ddef65aae6af510c84d8f3ea265f701eab2c64dc",
+  "previous_sha256": "7b3151ea834b753b85efef01a9810cf69aec9a7954f0bd9dc6dda618001f2bd7",
+  "method": "isotonic per method, fitted once on the same 1,000 dev learners; SPRT map refitted once on their full 20-question paths (a map is fitted on the kind of path it scores); fixed, random and BOBCAT maps unchanged"
+ },
+ "sprt": {
+  "cut": 0.0,
+  "delta": 0.7,
+  "alpha": 0.05,
+  "beta": 0.05,
+  "max": 20,
+  "tune_sha256": "1c2214115d322dec592f0d932f9922011448446607a20b3e4edb0572af1962f2",
+  "tuning_rule_revised_post_hoc": true,
+  "path": "fixed order run to 20 for every learner; native boundary step recorded beside the calibrated 0.90 crossing"
+ },
+ "settings": {
+  "c_main": 0.0,
+  "c_check": 0.25,
+  "h_main": 0.3,
+  "h_checks": [
+   0.0,
+   0.6
+  ],
+  "cut": 0.0,
+  "borderline_margin": 0.25,
+  "max_questions": 20,
+  "checkpoints": [
+   1,
+   3,
+   5,
+   10
+  ],
+  "target_primary": 0.9,
+  "targets_secondary": [
+   0.8,
+   0.95
+  ],
+  "cohort_min_homework": 0.8,
+  "fixed_form_seeds": [
+   2026102600,
+   2026102601,
+   2026102602,
+   2026102603,
+   2026102604,
+   2026102605,
+   2026102606,
+   2026102607,
+   2026102608,
+   2026102609
+  ],
+  "scoring": "every method: first step on its own path whose calibrated confidence reaches 0.90; never reached = undecided, counted at 20; SPRT native stop reported beside"
+ },
+ "cells": [
+  {
+   "index": 0,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.0,
+   "seed": 2026110000
+  },
+  {
+   "index": 1,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.25,
+   "seed": 2026110100
+  },
+  {
+   "index": 2,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.5,
+   "seed": 2026110200
+  },
+  {
+   "index": 3,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.75,
+   "seed": 2026110300
+  },
+  {
+   "index": 4,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 1.0,
+   "seed": 2026110400
+  },
+  {
+   "index": 5,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.0,
+   "seed": 2026110500
+  },
+  {
+   "index": 6,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.25,
+   "seed": 2026110600
+  },
+  {
+   "index": 7,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.5,
+   "seed": 2026110700
+  },
+  {
+   "index": 8,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.75,
+   "seed": 2026110800
+  },
+  {
+   "index": 9,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 1.0,
+   "seed": 2026110900
+  },
+  {
+   "index": 10,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.0,
+   "seed": 2026111000
+  },
+  {
+   "index": 11,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.25,
+   "seed": 2026111100
+  },
+  {
+   "index": 12,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.5,
+   "seed": 2026111200
+  },
+  {
+   "index": 13,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.75,
+   "seed": 2026111300
+  },
+  {
+   "index": 14,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 1.0,
+   "seed": 2026111400
+  },
+  {
+   "index": 15,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.0,
+   "seed": 2026111500
+  },
+  {
+   "index": 16,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.25,
+   "seed": 2026111600
+  },
+  {
+   "index": 17,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.5,
+   "seed": 2026111700
+  },
+  {
+   "index": 18,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.75,
+   "seed": 2026111800
+  },
+  {
+   "index": 19,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 1.0,
+   "seed": 2026111900
+  }
+ ],
+ "n_per_cell": 8100,
+ "n_per_cell_ruling": "8,100 approved 25 Oct 2026",
+ "pilot": {
+  "sha256": "b1dbb84eb99a2396bf3d4536106012ce601a2866cc82604b58c81c8f87299e54",
+  "worst_paired_sd": 8.892387142842825,
+  "n_needed": 6320,
+  "pass_number": 5
+ },
+ "endpoints": {
+  "primary": "questions needed at the 0.90 calibrated target, undecided at 20, per method per cell; paired differences with learner-level bootstrap (2,000 resamples)",
+  "reported_beside": [
+   "realised decision error among decided known learners",
+   "undecided rate",
+   "false mastery",
+   "false gap",
+   "calibration on stopped runs",
+   "added transfer prediction beyond homework score"
+  ]
+ },
+ "confirmatory": {
+  "holm_over": 8,
+  "contrasts": [
+   "SPRT vs fixed, uniform, d=0.0, a=0.95",
+   "SPRT vs fixed, uniform, d=0.5, a=0.95",
+   "SPRT vs fixed, uncertainty, d=0.0, a=0.95",
+   "SPRT vs fixed, uncertainty, d=0.5, a=0.95",
+   "SPRT vs BOBCAT, uniform, d=0.0, a=0.95",
+   "SPRT vs BOBCAT, uniform, d=0.5, a=0.95",
+   "SPRT vs BOBCAT, uncertainty, d=0.0, a=0.95",
+   "SPRT vs BOBCAT, uncertainty, d=0.5, a=0.95"
+  ],
+  "bobcat_gate": "passed 25 Oct 2026 (dev learners), so the 4 SPRT-vs-BOBCAT contrasts are confirmatory"
+ },
+ "resources": {
+  "cpu_only": true,
+  "per_cell_seconds_cap": 1800,
+  "per_cell_rss_gib": 2,
+  "new_evidence_mib": 256,
+  "paid_usd": 0,
+  "mac_lock": true
+ },
+ "held_out_rule": "held-out world seeds 2026110000 + 100 x cell index (cells 0-19); each cell also uses seed + 7 for random orders, so seeds are spaced 100 apart to keep every stream distinct; no held-out learner was simulated before this freeze; dev seeds were 20261025xx and 2026102600-09",
+ "secondary_signature": {
+  "statistics": [
+   "difficulty_correctness",
+   "lz",
+   "llr_outsourcing",
+   "hw_minus_fu",
+   "fu_minus_transfer",
+   "sprt_confident_wrong",
+   "probe_excess"
+  ],
+  "directions": {
+   "difficulty_correctness": 1,
+   "lz": -1,
+   "llr_outsourcing": 1,
+   "hw_minus_fu": -1,
+   "fu_minus_transfer": 1,
+   "sprt_confident_wrong": 1,
+   "probe_excess": 1
+  },
+  "checkpoints": [
+   5,
+   10,
+   15,
+   20
+  ],
+  "separation_auc": 0.75,
+  "comparison": "AUC of the d = 0 cell against each d > 0 cell, same outsourcing model and AI accuracy",
+  "orders": "statistics 1-6 on the SPRT order; statistic 7 per method on its own order, never pooled",
+  "simulation_only": [
+   "sprt_confident_wrong"
+  ],
+  "probes": {
+   "count": 10,
+   "q_ids": [
+    5494,
+    2522,
+    5615,
+    5475,
+    5447,
+    14873,
+    14754,
+    14792,
+    8807,
+    5625
+   ],
+   "rule": "hardest follow-up items by fitted b"
+  },
+  "status": "secondary, descriptive, no selection among the seven"
+ }
+}

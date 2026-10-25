@@ -1,0 +1,32 @@
+{
+ "source": "/Users/vishnu/pipeline-store/reasoning-boundary/published-cat-audit-v1/arghosh-BOBCAT/data/train_task_assist2009.json",
+ "source_sha256": "c07ca9fa0f08207b06488cec527725938fe96e81e3c1762839e1ad0b84f974cc",
+ "split": "sha256(\"edm-v2-e0:\"+user_id)[0] % 2 == 0",
+ "dev_learners": 655,
+ "items": 156,
+ "min_dev_responses": 50,
+ "first_attempt_only": true,
+ "model": "2PL, c=0 (guessing set in the simulator, an assumption)",
+ "quadrature": 31,
+ "prior": "log a ~ N(0, 0.5^2)",
+ "em_iterations": 25,
+ "final_loglik": -5344.3656133485765,
+ "seconds": 0.3,
+ "output_sha256": "12a3b167cd9c9b78b3c3c7faf71b2e464b0943a454f6418faf0f99b1114cb7fc",
+ "a_quantiles": [
+  0.623,
+  0.951,
+  1.154,
+  1.442,
+  2.327
+ ],
+ "b_quantiles": [
+  -2.707,
+  -0.655,
+  -0.308,
+  0.033,
+  1.419
+ ],
+ "reportable": false,
+ "paid_usd": 0
+}

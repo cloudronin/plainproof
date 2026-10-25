@@ -1,0 +1,227 @@
+{
+ "rule": "among (delta, max) with decision error <= 0.10 among decided known learners in both d = 0 cells, pick the smallest mean questions (undecided at max) averaged over the two d = 0 cells; ties -> smaller max, then smaller delta. Revised 25 Oct 2026 after the first tuning pass (development only, before the freeze): the first rule required error <= 0.10 in all four cells, which no setting met because outsourcing at d = 0.5 raises error to 0.11-0.27 for every setting; that rise is the study outcome, so tuning uses d = 0 only",
+ "grid": [
+  {
+   "delta": 0.3,
+   "max": 20,
+   "cells": [
+    {
+     "model": "uniform",
+     "d": 0.0,
+     "mean_q": 11.81,
+     "undecided": 0.282,
+     "error": 0.0
+    },
+    {
+     "model": "uniform",
+     "d": 0.5,
+     "mean_q": 13.558,
+     "undecided": 0.334,
+     "error": 0.13026819923371646
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.0,
+     "mean_q": 11.744,
+     "undecided": 0.276,
+     "error": 0.003003003003003003
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.5,
+     "mean_q": 12.466,
+     "undecided": 0.258,
+     "error": 0.10810810810810811
+    }
+   ],
+   "ok": true,
+   "mean_q": 11.777000000000001
+  },
+  {
+   "delta": 0.3,
+   "max": 30,
+   "cells": [
+    {
+     "model": "uniform",
+     "d": 0.0,
+     "mean_q": 14.29,
+     "undecided": 0.218,
+     "error": 0.0
+    },
+    {
+     "model": "uniform",
+     "d": 0.5,
+     "mean_q": 16.438,
+     "undecided": 0.236,
+     "error": 0.19387755102040816
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.0,
+     "mean_q": 14.218,
+     "undecided": 0.208,
+     "error": 0.0028169014084507044
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.5,
+     "mean_q": 14.628,
+     "undecided": 0.168,
+     "error": 0.14551083591331268
+    }
+   ],
+   "ok": true,
+   "mean_q": 14.254
+  },
+  {
+   "delta": 0.5,
+   "max": 20,
+   "cells": [
+    {
+     "model": "uniform",
+     "d": 0.0,
+     "mean_q": 7.31,
+     "undecided": 0.108,
+     "error": 0.03064066852367688
+    },
+    {
+     "model": "uniform",
+     "d": 0.5,
+     "mean_q": 8.644,
+     "undecided": 0.108,
+     "error": 0.23714285714285716
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.0,
+     "mean_q": 7.476,
+     "undecided": 0.092,
+     "error": 0.01837270341207349
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.5,
+     "mean_q": 7.59,
+     "undecided": 0.084,
+     "error": 0.1763085399449036
+    }
+   ],
+   "ok": true,
+   "mean_q": 7.393
+  },
+  {
+   "delta": 0.5,
+   "max": 30,
+   "cells": [
+    {
+     "model": "uniform",
+     "d": 0.0,
+     "mean_q": 8.172,
+     "undecided": 0.068,
+     "error": 0.03225806451612903
+    },
+    {
+     "model": "uniform",
+     "d": 0.5,
+     "mean_q": 9.494,
+     "undecided": 0.068,
+     "error": 0.2540983606557377
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.0,
+     "mean_q": 8.242,
+     "undecided": 0.058,
+     "error": 0.020460358056265986
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.5,
+     "mean_q": 8.234,
+     "undecided": 0.042,
+     "error": 0.20526315789473684
+    }
+   ],
+   "ok": true,
+   "mean_q": 8.207
+  },
+  {
+   "delta": 0.7,
+   "max": 20,
+   "cells": [
+    {
+     "model": "uniform",
+     "d": 0.0,
+     "mean_q": 5.078,
+     "undecided": 0.048,
+     "error": 0.04838709677419355
+    },
+    {
+     "model": "uniform",
+     "d": 0.5,
+     "mean_q": 5.682,
+     "undecided": 0.02,
+     "error": 0.266839378238342
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.0,
+     "mean_q": 5.056,
+     "undecided": 0.036,
+     "error": 0.035623409669211195
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.5,
+     "mean_q": 5.316,
+     "undecided": 0.032,
+     "error": 0.19170984455958548
+    }
+   ],
+   "ok": true,
+   "mean_q": 5.067
+  },
+  {
+   "delta": 0.7,
+   "max": 30,
+   "cells": [
+    {
+     "model": "uniform",
+     "d": 0.0,
+     "mean_q": 5.424,
+     "undecided": 0.028,
+     "error": 0.05026455026455026
+    },
+    {
+     "model": "uniform",
+     "d": 0.5,
+     "mean_q": 5.768,
+     "undecided": 0.004,
+     "error": 0.2697201017811705
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.0,
+     "mean_q": 5.308,
+     "undecided": 0.012,
+     "error": 0.03759398496240601
+    },
+    {
+     "model": "uncertainty",
+     "d": 0.5,
+     "mean_q": 5.524,
+     "undecided": 0.01,
+     "error": 0.20506329113924052
+    }
+   ],
+   "ok": true,
+   "mean_q": 5.366
+  }
+ ],
+ "chosen": {
+  "delta": 0.7,
+  "max": 20
+ },
+ "seeds": 2026102520,
+ "n_per_cell": 500
+}

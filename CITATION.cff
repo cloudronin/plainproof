@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper (citation to be added on acceptance)."
+title: "How many follow-up questions distinguish genuine understanding from apparent mastery? Reproduction package"
+authors:
+  - family-names: Vettrivel
+    given-names: Vishnu
+license: MIT

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plainproof"
+version = "0.1.0"
+description = "Reproduction tool for the paper 'How many follow-up questions distinguish genuine understanding from apparent mastery?'. Not a general library. Its sealed checks can stop a run on purpose."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Vishnu Vettrivel"}]
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "scipy>=1.13"]
+
+[project.optional-dependencies]
+run = ["scikit-learn>=1.5", "torch>=2.4"]
+test = ["pytest>=8", "pytest-xdist>=3.5"]
+
+[project.scripts]
+plainproof = "plainproof.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

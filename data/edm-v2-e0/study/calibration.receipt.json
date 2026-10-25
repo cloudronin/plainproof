@@ -1,0 +1,22 @@
+{
+ "sha256": "7b3151ea834b753b85efef01a9810cf69aec9a7954f0bd9dc6dda618001f2bd7",
+ "method": "isotonic, pooled over the 4 confirmatory cells and all steps",
+ "learners_per_cell": 250,
+ "seeds": [
+  2026102540,
+  2026102541,
+  2026102542,
+  2026102543
+ ],
+ "same_learners_for_every_method": true,
+ "sprt": {
+  "delta": 0.7,
+  "max": 20
+ },
+ "points": {
+  "sprt": 3880,
+  "fixed": 162000,
+  "random": 16200,
+  "bobcat": 16200
+ }
+}

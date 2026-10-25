@@ -1,0 +1,37 @@
+{
+ "settings": {
+  "dataset": "assist2009",
+  "dropout": 0.5,
+  "fold": 1,
+  "hidden_dim": 1024,
+  "inner_loop": 5,
+  "inner_lr": 0.1,
+  "lr": 0.0001,
+  "meta_lr": 0.0001,
+  "model": "biirt-biased",
+  "n_epoch": 5000,
+  "n_query": 5,
+  "n_question": 26688,
+  "name": "demo",
+  "neptune": false,
+  "policy_lr": 0.002,
+  "question_dim": 4,
+  "repeat": 10,
+  "save": false,
+  "seed": 221,
+  "test_batch_size": 512,
+  "train_batch_size": 128,
+  "use_cuda": false,
+  "wait": 250
+ },
+ "source_commit": "e6b6245e23c1065ba8b8c56de5f051dfbcdd89ec",
+ "scope": "one author-default fold, current CPU port, no retuning",
+ "checkpoint_sha256": "ea849f4716c3f80fda63d37f786707d59e805e2224d02b28acf61c65db91999b",
+ "note": "settings of the original training run; the original freeze also pinned files on the original machine, which this repo replaces with scripts/bobcat/retrain.py",
+ "original_result": {
+  "best_epoch": 105,
+  "stop_epoch": 355,
+  "best_test_auc": 0.6771024369611982,
+  "best_test_score": 0.6704053351810151
+ }
+}

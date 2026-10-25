@@ -1,0 +1,292 @@
+{
+ "protocol": "E0b planted hard probes",
+ "status": "SEALED on Vishnu ruling of 25 Oct 2026 (pilot shown first)",
+ "created_utc": "2026-10-25T17:16:01+00:00",
+ "question": "do planted hard probes separate outsourcing from honest learners",
+ "e0_freeze_sha256": "a0f8ce404f2b5f7e671e2503a33b4554040e80714f6053553507e0972acdbcdc",
+ "code": {
+  "prep-quality/prep_quality/edm_v2/planted.py": "2e80cd50315bf1cfafa729dec44252770c650f69db1d430f84aff1357551b878",
+  "scripts/edm_v2_e0b/run.py": "ada1e2687962037db7f98fd8f047efc38e7f3e19d4cff2c299c3a623fadb6847",
+  "prep-quality/tests/test_edm_v2_e0b.py": "4024750c0dedb3c99c69ba71f5d196928bbcd4cfd8f193e69fbb77632451927a",
+  "scripts/edm_v2_e0/heldout.py": "6697320899dd92ba8b30cd038d0ec38eaacffbd0b1d0f8cde9f15193182baf7e",
+  "scripts/edm_v2_e0/study.py": "732462f7852850d5b21dbefaf4cf5db91ab12a4d51d32798a006344fe7806b17",
+  "prep-quality/prep_quality/edm_v2/simulator.py": "8564949e5c2ea42eab2fb75028ba82b7048597477c8844debfd984d9c6d0640c",
+  "prep-quality/prep_quality/edm_v2/signature.py": "6152cdb1bdebd7643859ac2131160d50d0a9c21a6568582276cf0631bc4a5008",
+  "prep-quality/prep_quality/edm_v2/sprt.py": "3129dad31ea11830651ae473870d0ce80cf8321e48a46db5f0a10e440ac65e2e",
+  "prep-quality/prep_quality/edm_v2/irt.py": "0d231e5050bc5c0a02f4c5b27cfc24d955d4079b350f06e067ba0f37defa310b",
+  "prep-quality/prep_quality/edm_v2/bank_from_fit.py": "df9f085a9f392e0202eb31b4023c0ddb6535891de55a1603b2e2c354d1876157"
+ },
+ "probes": {
+  "count": 3,
+  "difficulty": [
+   2.5,
+   3.0,
+   3.5
+  ],
+  "discrimination": "bank median (1.154)",
+  "c": 0.0,
+  "positions": [
+   4,
+   9,
+   14
+  ],
+  "positions_count": "every item asked; k = 15 means 12 scored items plus all 3 probes",
+  "scoring": "asked but unscored: no effect on SPRT tally, BOBCAT state, posterior, calibration or stopping; frozen E0 functions and maps unchanged",
+  "answers": "own random stream (seed + 13), so scored answers are unchanged by planting"
+ },
+ "statistics": {
+  "raw_hits": "probes correct among those asked by k (0 to 3)",
+  "probe_excess": "hit rate minus mean 3PL probability at the EAP theta from the scored items asked by k (per method)",
+  "auc": "d = 0 cell against each d > 0 cell, same model and AI accuracy; all learners and split by true theta at the cut",
+  "checkpoints": [
+   5,
+   10,
+   15,
+   20
+  ]
+ },
+ "models": {
+  "uniform": "pre-registered line and kill",
+  "uncertainty": "null expected by construction: it outsources where the own chance is near 0.5, and probes sit near 0; reported",
+  "giveup": "exploratory: weight 1 - p, scaled per learner so the bank mean equals d"
+ },
+ "line": {
+  "auc": 0.75,
+  "d": 0.5,
+  "a_ai": 0.95,
+  "k": 15,
+  "model": "uniform",
+  "statistics": [
+   "raw_hits",
+   "probe_excess (each method)"
+  ]
+ },
+ "kill": "no crossing at the line under the uniform model: the probe idea is reported as not working and dropped from the paper",
+ "cells": [
+  {
+   "index": 0,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.0,
+   "seed": 2026120000
+  },
+  {
+   "index": 1,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.25,
+   "seed": 2026120100
+  },
+  {
+   "index": 2,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.5,
+   "seed": 2026120200
+  },
+  {
+   "index": 3,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 0.75,
+   "seed": 2026120300
+  },
+  {
+   "index": 4,
+   "model": "uniform",
+   "a_ai": 0.95,
+   "d": 1.0,
+   "seed": 2026120400
+  },
+  {
+   "index": 5,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.0,
+   "seed": 2026120500
+  },
+  {
+   "index": 6,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.25,
+   "seed": 2026120600
+  },
+  {
+   "index": 7,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.5,
+   "seed": 2026120700
+  },
+  {
+   "index": 8,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 0.75,
+   "seed": 2026120800
+  },
+  {
+   "index": 9,
+   "model": "uniform",
+   "a_ai": 0.75,
+   "d": 1.0,
+   "seed": 2026120900
+  },
+  {
+   "index": 10,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.0,
+   "seed": 2026121000
+  },
+  {
+   "index": 11,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.25,
+   "seed": 2026121100
+  },
+  {
+   "index": 12,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.5,
+   "seed": 2026121200
+  },
+  {
+   "index": 13,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 0.75,
+   "seed": 2026121300
+  },
+  {
+   "index": 14,
+   "model": "uncertainty",
+   "a_ai": 0.95,
+   "d": 1.0,
+   "seed": 2026121400
+  },
+  {
+   "index": 15,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.0,
+   "seed": 2026121500
+  },
+  {
+   "index": 16,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.25,
+   "seed": 2026121600
+  },
+  {
+   "index": 17,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.5,
+   "seed": 2026121700
+  },
+  {
+   "index": 18,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 0.75,
+   "seed": 2026121800
+  },
+  {
+   "index": 19,
+   "model": "uncertainty",
+   "a_ai": 0.75,
+   "d": 1.0,
+   "seed": 2026121900
+  },
+  {
+   "index": 20,
+   "model": "giveup",
+   "a_ai": 0.95,
+   "d": 0.0,
+   "seed": 2026122000
+  },
+  {
+   "index": 21,
+   "model": "giveup",
+   "a_ai": 0.95,
+   "d": 0.25,
+   "seed": 2026122100
+  },
+  {
+   "index": 22,
+   "model": "giveup",
+   "a_ai": 0.95,
+   "d": 0.5,
+   "seed": 2026122200
+  },
+  {
+   "index": 23,
+   "model": "giveup",
+   "a_ai": 0.95,
+   "d": 0.75,
+   "seed": 2026122300
+  },
+  {
+   "index": 24,
+   "model": "giveup",
+   "a_ai": 0.95,
+   "d": 1.0,
+   "seed": 2026122400
+  },
+  {
+   "index": 25,
+   "model": "giveup",
+   "a_ai": 0.75,
+   "d": 0.0,
+   "seed": 2026122500
+  },
+  {
+   "index": 26,
+   "model": "giveup",
+   "a_ai": 0.75,
+   "d": 0.25,
+   "seed": 2026122600
+  },
+  {
+   "index": 27,
+   "model": "giveup",
+   "a_ai": 0.75,
+   "d": 0.5,
+   "seed": 2026122700
+  },
+  {
+   "index": 28,
+   "model": "giveup",
+   "a_ai": 0.75,
+   "d": 0.75,
+   "seed": 2026122800
+  },
+  {
+   "index": 29,
+   "model": "giveup",
+   "a_ai": 0.75,
+   "d": 1.0,
+   "seed": 2026122900
+  }
+ ],
+ "n_per_cell": 2000,
+ "held_out_rule": "seeds 2026120000 + 100 x cell index, never used before; dev pilots used 2026113000 and 2026114000 bases",
+ "pilot": {
+  "sha256": "89f195bb69fc9ddab0e16dd664772af03f1ba5a7b3667e6fa5d9ebffed2e1ba5",
+  "n": 500,
+  "cells": 30
+ },
+ "resources": {
+  "cpu_only": true,
+  "per_cell_rss_gib": 2,
+  "per_cell_seconds": 1800,
+  "enforced": true,
+  "paid_usd": 0,
+  "mac_lock": true
+ }
+}
