@@ -1,5 +1,9 @@
 # plainproof
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23647650.svg)](https://doi.org/10.5281/zenodo.23647650)
+
+Archived on Zenodo: version 0.1.0 is DOI [10.5281/zenodo.23647650](https://doi.org/10.5281/zenodo.23647650); all versions are DOI [10.5281/zenodo.23647649](https://doi.org/10.5281/zenodo.23647649). Also on PyPI: `pip install plainproof`.
+
 Reproduction package for **"How many follow-up questions distinguish genuine understanding from apparent mastery?"** (EDM 2027 submission, simulation study). It asks how many adaptive follow-up questions a classification test needs to tell genuine understanding from apparent mastery at a calibrated confidence target, and how that changes as a learner outsources a share *d* of the follow-ups to an AI. A second, sealed study (E0b) tests whether planted hard probe items separate outsourcing learners from honest ones.
 
 Everything here is CPU-only and needs no paid service. Code: MIT (`LICENSE`). Docs, figures and tables: CC BY 4.0 (`LICENSE-docs.md`).
@@ -18,8 +22,8 @@ python -m pytest -n auto -q tests
 # 2. Check that the code here is the sealed code (undoes the documented path substitutions, then compares sha256)
 plainproof verify
 
-# 3. Fetch the sealed held-out outputs from Zenodo (DOI: to be assigned) and check their hashes
-ZENODO_URL=<record file URL> plainproof fetch heldout
+# 3. Fetch the sealed held-out outputs (from the v0.1.0 release assets) and check their hashes
+plainproof fetch heldout
 
 # 4. Rebuild the tables and figures from the held-out summaries (needs R 4.x for the plots; base graphics only)
 python scripts/edm_v2_e0/report.py data/edm-v2-e0/heldout/summary.json
@@ -48,7 +52,7 @@ python scripts/edm_v2_e0/heldout.py run data/edm-v2-e0/heldout && python scripts
 python scripts/edm_v2_e0b/run.py run data/edm-v2-e0b/heldout && python scripts/edm_v2_e0b/run.py summarize data/edm-v2-e0b/heldout
 ```
 
-Two caveats, stated plainly. The sealed code checks the item fit's sha256, so a different numpy can stop step b; and it asserts that the BOBCAT checkpoint's best epoch is 105, so a retrain that is not bit-identical can stop step d. In either case, use the Zenodo outputs. The development stages (`study.py tune|calibrate|calibrate_sprt_full|pilot`) are included for the record; their outputs (synthetic learners only) are in `data/edm-v2-e0/study/`.
+Two caveats, stated plainly. The sealed code checks the item fit's sha256, so a different numpy can stop step b; and it asserts that the BOBCAT checkpoint's best epoch is 105, so a retrain that is not bit-identical can stop step d. In either case, use the published held-out outputs (`plainproof fetch heldout`). The development stages (`study.py tune|calibrate|calibrate_sprt_full|pilot`) are included for the record; their outputs (synthetic learners only) are in `data/edm-v2-e0/study/`.
 
 ## Fingerprints (sha256)
 
@@ -56,10 +60,10 @@ Two caveats, stated plainly. The sealed code checks the item fit's sha256, so a 
 |---|---|
 | E0 sealed freeze `reports/edm-v2-e0/freeze.json` | `a0f8ce404f2b5f7e671e2503a33b4554040e80714f6053553507e0972acdbcdc` |
 | E0b sealed freeze `reports/edm-v2-e0b/freeze.json` | `3fa0b8d457d813f59abd5255f9303e44deb2119ee79d6a9b92439a6c1cbf58ed` |
-| E0 held-out summary (Zenodo, `e0-heldout.tar` → `heldout/summary.json`) | `aff9a8c49d48821c0e9343cd058c4e0e2f1659ffabcaa719824412f3b14abc90` |
-| E0b held-out summary (Zenodo, `e0b-heldout.tar` → `heldout/summary.json`) | `617be427feac24df2e342da00d34e91c78d5de91592cee390ef3516ae9e2ff3f` |
-| Zenodo `e0-heldout.tar` | `bd06a11eb7163da102cad6ea0df12ea79e52ff94aab1dc35d28ec3910af2be22` |
-| Zenodo `e0b-heldout.tar` | `68219f228c41da972fe4c8f92c218e01f85f08eed864185f237cecda05314bbf` |
+| E0 held-out summary (`e0-heldout.tar` → `heldout/summary.json`) | `aff9a8c49d48821c0e9343cd058c4e0e2f1659ffabcaa719824412f3b14abc90` |
+| E0b held-out summary (`e0b-heldout.tar` → `heldout/summary.json`) | `617be427feac24df2e342da00d34e91c78d5de91592cee390ef3516ae9e2ff3f` |
+| `e0-heldout.tar` (release asset) | `bd06a11eb7163da102cad6ea0df12ea79e52ff94aab1dc35d28ec3910af2be22` |
+| `e0b-heldout.tar` (release asset) | `68219f228c41da972fe4c8f92c218e01f85f08eed864185f237cecda05314bbf` |
 | ASSISTments 2009 file at BOBCAT e6b6245e | `c07ca9fa0f08207b06488cec527725938fe96e81e3c1762839e1ad0b84f974cc` |
 | 2PL item fit (regenerated in step b) | `12a3b167cd9c9b78b3c3c7faf71b2e464b0943a454f6418faf0f99b1114cb7fc` |
 | catIrt 0.5.1 CRAN binary used for the fixture | `f5418f447e91d184791e668bd2a135ea5da40c981d4a76826018295b6ea9f079` |

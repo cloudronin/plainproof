@@ -3,7 +3,7 @@
 It runs the repository's own scripts, so it needs a checkout or the unpacked sdist (the sealed scripts locate the
 repository by its layout). Pass --root, or run it from the repository root.
 
-  plainproof fetch [bobcat|heldout|all]   fetch BOBCAT + the ASSISTments file (hash-checked), and/or the Zenodo outputs
+  plainproof fetch [bobcat|heldout|all]   fetch BOBCAT + the ASSISTments file, and/or the held-out outputs (all hash-checked)
   plainproof fit                          refit the 2PL item parameters on ASSISTments development learners
   plainproof run e0|e0b                   held-out run and summary (refuses to overwrite an existing cell)
   plainproof figures                      rebuild tables and figures from the held-out summaries (needs R for the plots)
@@ -54,8 +54,6 @@ def main(argv=None):
         if a.what in ('bobcat', 'all'):
             sh(root, 'bash', 'scripts/bobcat/fetch_bobcat.sh')
         if a.what in ('heldout', 'all'):
-            if not os.environ.get('ZENODO_URL'):
-                raise SystemExit('set ZENODO_URL to the Zenodo record file URL to fetch the held-out outputs')
             sh(root, 'bash', 'scripts/fetch_heldout.sh')
     elif a.cmd == 'fit':
         sh(root, py, 'scripts/edm_v2_e0/fit_assist2009.py', data / 'edm-v2-e0' / 'item-fit')
