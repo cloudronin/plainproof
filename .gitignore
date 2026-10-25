@@ -8,3 +8,4 @@ dist/
 build/
 *.egg-info/
 .venv/
+src/plainproof/payload/
