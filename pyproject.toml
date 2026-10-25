@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "plainproof"
-version = "0.2.0"
+version = "0.2.1"
 description = "Reproduction tool for the paper 'How many follow-up questions distinguish genuine understanding from apparent mastery?'. Not a general library. Its sealed checks can stop a run on purpose."
 readme = "README.md"
 license = "MIT"

@@ -5,7 +5,7 @@ authors:
   - family-names: Vettrivel
     given-names: Vishnu
 license: MIT
-version: 0.2.0
+version: 0.2.1
 doi: 10.5281/zenodo.23647649
 identifiers:
   - type: doi
